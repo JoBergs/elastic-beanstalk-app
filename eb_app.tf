@@ -33,7 +33,7 @@ resource "aws_s3_bucket_object" "eb_bucket_obj" {
 
 # Define Elastic Beanstalk application
 resource "aws_elastic_beanstalk_application" "eb_app" {
-  name        = "enes-eb-tf-app"   # Name of the Elastic Beanstalk application
+  name        = "jo-eb-tf-app"   # Name of the Elastic Beanstalk application
   description = "simple flask app" # Description of the Elastic Beanstalk application
 }
 
@@ -46,7 +46,7 @@ resource "aws_elastic_beanstalk_application_version" "eb_app_ver" {
 }
 
 resource "aws_elastic_beanstalk_environment" "tfenv" {
-  name                = "enes-eb-tf-env"
+  name                = "jo-eb-tf-env"
   application         = aws_elastic_beanstalk_application.eb_app.name             # Elastic Beanstalk application name
   solution_stack_name = "64bit Amazon Linux 2023 v4.0.2 running Python 3.9"         # Define current version of the platform
   description         = "environment for flask app"                               # Define environment description
