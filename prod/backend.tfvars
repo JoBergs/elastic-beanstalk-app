@@ -1,3 +1,3 @@
-bucket = "enes-mybucket"
-key    = "path/to/my/key"
-region = "us-east-2"
+bucket = "eb-flask-app-statefile"
+key    = "statefile/terraform.tfstate"
+region = "eu-central-1"
